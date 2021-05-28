@@ -1,0 +1,60 @@
+<web-app>
+    <resource-ref>
+        <description>Group Design Project</description>
+        <res-ref-name>jdbc/gdpdatabase</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
+
+    <servlet>
+        <servlet-name>DatabaseServlet</servlet-name>
+        <servlet-class>DatabaseServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LiveServlet</servlet-name>
+        <servlet-class>LiveServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LiveQuery</servlet-name>
+        <servlet-class>LiveQuery</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MessagingServlet</servlet-name>
+        <servlet-class>MessagingServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>TrainQuery</servlet-name>
+        <servlet-class>TrainQuery</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CoachQuery</servlet-name>
+        <servlet-class>CoachQuery</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DatabaseServlet</servlet-name>
+        <url-pattern>/query</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LiveServlet</servlet-name>
+        <url-pattern>/live</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LiveQuery</servlet-name>
+        <url-pattern>/api/live</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MessagingServlet</servlet-name>
+        <url-pattern>/message</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TrainQuery</servlet-name>
+        <url-pattern>/api/composition/train</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CoachQuery</servlet-name>
+        <url-pattern>/api/composition/coach</url-pattern>
+    </servlet-mapping>
+
+</web-app>

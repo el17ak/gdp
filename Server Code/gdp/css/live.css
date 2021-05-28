@@ -1,0 +1,24 @@
+.occupiedClass {
+  width: 85%;
+  height: 85%;
+  background-color: red;
+  color: white;
+  display: inline-block;
+}
+
+.freeClass {
+  width: 85%;
+  height: 85%;
+  background-color: green;
+  color: white;
+  display: inline-block;
+}
+
+.unavailableClass {
+  width: 85%;
+  height: 85%;
+  background-color: gray;
+  color: black;
+  display: inline-block;
+}
+
